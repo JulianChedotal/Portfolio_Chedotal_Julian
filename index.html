@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Portfolio — Votre Nom</title>
+		<meta name="description" content="Portfolio professionnel de Votre Nom — développeur·se web / designer / freelance" />
+		<link rel="stylesheet" href="styles.css">
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="#">Chedotal Julian</a>
+				<nav class="nav" id="nav">
+					<ul>
+						<li><a href="#about">À propos</a></li>
+						<li><a href="#skills">Compétences</a></li>
+						<li><a href="#projects">Projets</a></li>
+						<li><a href="#experience">Expérience</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="header-actions">
+					<a class="btn-outline" href="resume.pdf" download>CV</a>
+					<button id="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container hero-inner">
+					<div class="hero-photo" aria-hidden="true">VN</div>
+					<div class="hero-copy">
+						<h1>Bonjour — je suis <span class="accent">Julian Chedotal</span></h1>
+						<p class="lead">Je suis actuellement étudiant en BTS CIEL à la recherche d'un stage du 18 mai au 16 juin.</p>
+						<p class="hero-cta">
+							<a class="btn" href="#projects">Voir mes projets</a>
+							<a class="btn-muted" href="#contact">Me contacter</a>
+						</p>
+						<p class="meta">Basé·e à Saint-Nazaire · Disponible pour des missions freelance</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" class="section about">
+				<div class="container">
+					<h2>À propos</h2>
+					<p>Je suis développeur web passionné par la création d'interfaces intuitives et performantes. J'aide les entreprises à transformer leurs idées en produits digitaux robustes.</p>
+					<ul class="highlights">
+						<li><strong>Expérience :</strong> 5+ ans</li>
+						<li><strong>Stack :</strong> HTML, CSS, JavaScript, React</li>
+						<li><strong>Langues :</strong> Français, Anglais</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="skills" class="section skills">
+				<div class="container">
+					<h2>Compétences</h2>
+					<div class="skill-grid">
+						<div class="skill">
+							<h3>HTML & CSS</h3>
+							<div class="progress"><span style="width:95%">90%</span></div>
+						</div>
+						<div class="skill">
+							<h3>C/C++</h3>
+							<div class="progress"><span style="width:90%">70%</span></div>
+						</div>
+						<div class="skill">
+							<h3>Java</h3>
+							<div class="progress"><span style="width:85%">50%</span></div>
+						</div>
+						<div class="skill">
+							<h3>SQL</h3>
+							<div class="progress"><span style="width:80%">50%</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="projects" class="section projects">
+				<div class="container">
+					<h2>Projets</h2>
+					<div class="filters">
+						<button class="filter active" data-filter="*">Tous</button>
+						<button class="filter" data-filter="web">Web</button>
+						<button class="filter" data-filter="mobile">Mobile</button>
+						<button class="filter" data-filter="design">Design</button>
+					</div>
+
+					<div class="project-grid">
+						<article class="project" data-category="web">
+							<div class="project-thumb">
+								<img src="https://via.placeholder.com/600x360?text=Projet+1" alt="Projet 1">
+							</div>
+							<div class="project-body">
+								<h3>Site e‑commerce</h3>
+								<p>Refonte d'une boutique en ligne avec paiement et optimisation SEO.</p>
+								<div class="project-actions">
+									<button class="btn-sm" data-modal="project-1">Détails</button>
+									<a class="btn-sm-outline" href="#" target="_blank">Visiter</a>
+								</div>
+							</div>
+						</article>
+
+						<article class="project" data-category="mobile">
+							<div class="project-thumb">
+								<img src="https://via.placeholder.com/600x360?text=Projet+2" alt="Projet 2">
+							</div>
+							<div class="project-body">
+								<h3>App mobile</h3>
+								<p>Prototype d'application mobile pour gestion de tâches.</p>
+								<div class="project-actions">
+									<button class="btn-sm" data-modal="project-2">Détails</button>
+								</div>
+							</div>
+						</article>
+
+						<article class="project" data-category="design">
+							<div class="project-thumb">
+								<img src="https://via.placeholder.com/600x360?text=Projet+3" alt="Projet 3">
+							</div>
+							<div class="project-body">
+								<h3>Identité visuelle</h3>
+								<p>Création de marque, logo et guide de style pour startup.</p>
+								<div class="project-actions">
+									<button class="btn-sm" data-modal="project-3">Détails</button>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<!-- Modals projets (léger) -->
+					<div id="modals">
+						<div class="modal" id="project-1" aria-hidden="true">
+							<div class="modal-content">
+								<button class="modal-close" aria-label="Fermer">✕</button>
+								<h3>Site e‑commerce — Détails</h3>
+								<p>Stack : HTML, CSS, JS, Stripe, SEO. Rôle : Intégration et optimisation des performances.</p>
+							</div>
+						</div>
+						<div class="modal" id="project-2" aria-hidden="true">
+							<div class="modal-content">
+								<button class="modal-close" aria-label="Fermer">✕</button>
+								<h3>App mobile — Détails</h3>
+								<p>Prototype réalisé avec React Native. Tests utilisateurs et itérations UX.</p>
+							</div>
+						</div>
+						<div class="modal" id="project-3" aria-hidden="true">
+							<div class="modal-content">
+								<button class="modal-close" aria-label="Fermer">✕</button>
+								<h3>Identité visuelle — Détails</h3>
+								<p>Logo, palette, et guidelines d'utilisation pour support print et web.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="experience" class="section experience">
+				<div class="container">
+					<h2>Expérience</h2>
+					<ul class="timeline">
+						<li>
+							<strong>2022–Présent</strong>
+							<span>Développeur·se front-end — Agence XYZ</span>
+							<p>Lead front-end sur plusieurs projets clients, optimisation des performances.</p>
+						</li>
+						<li>
+							<strong>2019–2021</strong>
+							<span>Freelance — Divers clients</span>
+							<p>Conception de sites vitrines et boutiques e‑commerce.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="contact" class="section contact">
+				<div class="container">
+					<h2>Contact</h2>
+					<p>Envoyez-moi un message pour discuter d'un projet ou d'une collaboration.</p>
+					<form id="contact-form">
+						<div class="form-grid">
+							<label>
+								Nom
+								<input type="text" name="name" required>
+							</label>
+							<label>
+								Email
+								<input type="email" name="email" required>
+							</label>
+							<label class="full">
+								Message
+								<textarea name="message" rows="6" required></textarea>
+							</label>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn">Envoyer</button>
+							<button type="reset" class="btn-muted">Effacer</button>
+						</div>
+						<p id="form-status" class="form-status" aria-live="polite"></p>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				<p>© <span id="year"></span> Chedotal Julian — Tous droits réservés</p>
+				<p class="socials">
+					<a href="#">LinkedIn</a> · <a href="#">GitHub</a> · <a href="#">Twitter</a>
+				</p>
+			</div>
+		</footer>
+
+		<button id="back-to-top" title="Haut de page">↑</button>
+	</body>
+</html>
+
