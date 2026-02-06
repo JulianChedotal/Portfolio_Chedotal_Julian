@@ -3,219 +3,374 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Portfolio — Votre Nom</title>
-		<meta name="description" content="Portfolio professionnel de Votre Nom — développeur·se web / designer / freelance" />
+		<title>Julian Chedotal — Etudiant en BTS CIEL 1ère année</title>
+		<meta name="description" content="Portfolio de Julian Chedotal — Etudiant en BTS CIEL" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="styles.css">
 		<script defer src="script.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
 			<div class="container header-inner">
-				<a class="brand" href="#">Chedotal Julian</a>
+				<a class="brand" href="#"><i class="fas fa-code"></i> Julian Chedotal</a>
 				<nav class="nav" id="nav">
 					<ul>
 						<li><a href="#about">À propos</a></li>
 						<li><a href="#skills">Compétences</a></li>
 						<li><a href="#projects">Projets</a></li>
-						<li><a href="#experience">Expérience</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 				<div class="header-actions">
-					<a class="btn-outline" href="resume.pdf" download>CV</a>
-					<button id="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+					<a class="btn-sm" href="#contact">Me contacter</a>
+					<button id="nav-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
 				</div>
 			</div>
 		</header>
 
 		<main>
+			<!-- Hero Section -->
 			<section class="hero">
 				<div class="container hero-inner">
-					<div class="hero-photo" aria-hidden="true">VN</div>
 					<div class="hero-copy">
-						<h1>Bonjour — je suis <span class="accent">Julian Chedotal</span></h1>
-						<p class="lead">Je suis actuellement étudiant en BTS CIEL à la recherche d'un stage du 18 mai au 16 juin.</p>
+						<div class="hero-badge">
+							<span><i class="fas fa-star"></i> Étudiant en BTS CIEL</span>
+						</div>
+						<h1>Créer des solutions <span class="accent">innovantes</span> en informatique</h1>
+						<p class="lead">Étudiant en BTS CIEL passionné par le développement et l'infrastructure système.</p>
 						<p class="hero-cta">
-							<a class="btn" href="#projects">Voir mes projets</a>
-							<a class="btn-muted" href="#contact">Me contacter</a>
+							<a class="btn" href="#projects"><i class="fas fa-rocket"></i> Voir mes projets</a>
+							<a class="btn-outline" href="#contact"><i class="fas fa-envelope"></i> Me contacter</a>
 						</p>
-						<p class="meta">Basé·e à Saint-Nazaire · Disponible pour des missions freelance</p>
+						<div class="hero-meta">
+							<span><i class="fas fa-map-marker-alt"></i> Saint-Nazaire</span>
+							<span><i class="fas fa-calendar"></i> 18 mai - 16 juin</span>
+							<span><i class="fas fa-check-circle"></i> Disponible</span>
+						</div>
 					</div>
 				</div>
 			</section>
 
+			<!-- About Section -->
 			<section id="about" class="section about">
 				<div class="container">
-					<h2>À propos</h2>
-					<p>Je suis développeur web passionné par la création d'interfaces intuitives et performantes. J'aide les entreprises à transformer leurs idées en produits digitaux robustes.</p>
-					<ul class="highlights">
-						<li><strong>Expérience :</strong> 5+ ans</li>
-						<li><strong>Stack :</strong> HTML, CSS, JavaScript, React</li>
-						<li><strong>Langues :</strong> Français, Anglais</li>
-					</ul>
+					<div class="section-header">
+						<h2><i class="fas fa-user-circle"></i> À propos</h2>
+						<p class="section-subtitle">Qui suis-je et ce que je peux apporter</p>
+					</div>
+					<div class="about-grid">
+						<div class="about-content">
+							<p class="lead">Je suis étudiant en BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique), passionné par la recherche de solutions numériques et physiques sécurisées.</p>
+							<p>Fort de mes connaissances en développement, développement web et infrastructure système et réseaux, j'apporte rigueur, créativité et détermination à chaque projet. Mon objectif: contribuer à des projets stimulants où je peux apprendre et grandir techniquement.</p>
+						</div>
+						<div class="about-highlights">
+							<div class="highlight-item">
+								<div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+								<div class="highlight-text">
+									<h4>Formation</h4>
+									<p>BTS CIEL 1ère année</p>
+								</div>
+							</div>
+							<div class="highlight-item">
+								<div class="highlight-icon"><i class="fas fa-code"></i></div>
+								<div class="highlight-text">
+									<h4>Spécialisation</h4>
+									<p>Développement Web</p>
+								</div>
+							</div>
+							<div class="highlight-item">
+								<div class="highlight-icon"><i class="fas fa-network-wired"></i></div>
+								<div class="highlight-text">
+									<h4>Domaines</h4>
+									<p>Systèmes & Réseaux</p>
+								</div>
+							</div>
+							<div class="highlight-item">
+								<div class="highlight-icon"><i class="fas fa-target"></i></div>
+								<div class="highlight-text">
+									<h4>Objectif</h4>
+									<p>Stage juin 2026</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
+			<!-- Skills Section -->
 			<section id="skills" class="section skills">
 				<div class="container">
-					<h2>Compétences</h2>
-					<div class="skill-grid">
-						<div class="skill">
-							<h3>HTML & CSS</h3>
-							<div class="progress"><span style="width:95%">90%</span></div>
+					<div class="section-header">
+						<h2><i class="fas fa-code"></i> Compétences</h2>
+						<p class="section-subtitle">Langages et technologies maîtrisés</p>
+					</div>
+					<div class="skills-wrapper">
+						<!-- Web Development -->
+						<div class="skill-category">
+							<h3><i class="fas fa-globe"></i> Développement Web</h3>
+							<div class="skill-list">
+								<div class="skill">
+									<div class="skill-header">
+										<h4>HTML & CSS</h4>
+										<span class="skill-level">Expert</span>
+									</div>
+									<div class="progress"><span style="width:95%"></span></div>
+								</div>
+								<div class="skill">
+									<div class="skill-header">
+										<h4>JavaScript</h4>
+										<span class="skill-level">Avancé</span>
+									</div>
+									<div class="progress"><span style="width:85%"></span></div>
+								</div>
+								<div class="skill">
+									<div class="skill-header">
+										<h4>Responsive Design</h4>
+										<span class="skill-level">Expert</span>
+									</div>
+									<div class="progress"><span style="width:90%"></span></div>
+								</div>
+							</div>
 						</div>
-						<div class="skill">
-							<h3>C/C++</h3>
-							<div class="progress"><span style="width:90%">70%</span></div>
+						<!-- Programming -->
+						<div class="skill-category">
+							<h3><i class="fas fa-code-branch"></i> Programmation</h3>
+							<div class="skill-list">
+								<div class="skill">
+									<div class="skill-header">
+										<h4>C/C++</h4>
+										<span class="skill-level">Avancé</span>
+									</div>
+									<div class="progress"><span style="width:80%"></span></div>
+								</div>
+								<div class="skill">
+									<div class="skill-header">
+										<h4>Java</h4>
+										<span class="skill-level">Intermédiaire</span>
+									</div>
+									<div class="progress"><span style="width:70%"></span></div>
+								</div>
+								<div class="skill">
+									<div class="skill-header">
+										<h4>Python</h4>
+										<span class="skill-level">Avancé</span>
+									</div>
+									<div class="progress"><span style="width:80%"></span></div>
+								</div>
+							</div>
 						</div>
-						<div class="skill">
-							<h3>Java</h3>
-							<div class="progress"><span style="width:85%">50%</span></div>
-						</div>
-						<div class="skill">
-							<h3>SQL</h3>
-							<div class="progress"><span style="width:80%">50%</span></div>
+						<!-- Systems & Security -->
+						<div class="skill-category">
+							<h3><i class="fas fa-shield-alt"></i> Systèmes & Sécurité</h3>
+							<div class="skill-list">
+								<div class="skill">
+									<div class="skill-header">
+										<h4>SQL</h4>
+										<span class="skill-level">Avancé</span>
+									</div>
+									<div class="progress"><span style="width:85%"></span></div>
+								</div>
+								<div class="skill">
+									<div class="skill-header">
+										<h4>Infrastructure Linux</h4>
+										<span class="skill-level">Intermédiaire</span>
+									</div>
+									<div class="progress"><span style="width:75%"></span></div>
+								</div>
+								<div class="skill">
+									<div class="skill-header">
+										<h4>Cybersécurité</h4>
+										<span class="skill-level">Intermédiaire</span>
+									</div>
+									<div class="progress"><span style="width:70%"></span></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
+			<!-- Projects Section -->
 			<section id="projects" class="section projects">
 				<div class="container">
-					<h2>Projets</h2>
-					<div class="filters">
-						<button class="filter active" data-filter="*">Tous</button>
-						<button class="filter" data-filter="web">Web</button>
-						<button class="filter" data-filter="mobile">Mobile</button>
-						<button class="filter" data-filter="design">Design</button>
+					<div class="section-header">
+						<h2><i class="fas fa-briefcase"></i> Projets</h2>
+						<p class="section-subtitle">Découvrez mes réalisations et expériences</p>
 					</div>
-
 					<div class="project-grid">
-						<article class="project" data-category="web">
+						<article class="project">
 							<div class="project-thumb">
-								<img src="https://via.placeholder.com/600x360?text=Projet+1" alt="Projet 1">
+								<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=360&fit=crop" alt="Portfolio Web">
+								<div class="project-overlay">
+									<span class="badge">Web</span>
+								</div>
 							</div>
 							<div class="project-body">
-								<h3>Site e‑commerce</h3>
-								<p>Refonte d'une boutique en ligne avec paiement et optimisation SEO.</p>
-								<div class="project-actions">
-									<button class="btn-sm" data-modal="project-1">Détails</button>
-									<a class="btn-sm-outline" href="#" target="_blank">Visiter</a>
+								<h3>Portfolio Professionnel</h3>
+								<p>Création d'un portfolio moderne avec HTML, CSS et JavaScript. Design responsif et animations fluides.</p>
+								<div class="tech-tags">
+									<span class="tag">HTML</span>
+									<span class="tag">CSS</span>
+									<span class="tag">JavaScript</span>
 								</div>
 							</div>
 						</article>
 
-						<article class="project" data-category="mobile">
+						<article class="project">
 							<div class="project-thumb">
-								<img src="https://via.placeholder.com/600x360?text=Projet+2" alt="Projet 2">
+								<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=360&fit=crop" alt="Application Web">
+								<div class="project-overlay">
+									<span class="badge">Application</span>
+								</div>
 							</div>
 							<div class="project-body">
-								<h3>App mobile</h3>
-								<p>Prototype d'application mobile pour gestion de tâches.</p>
-								<div class="project-actions">
-									<button class="btn-sm" data-modal="project-2">Détails</button>
+								<h3>Application Web Dynamique</h3>
+								<p>Développement d'une application avec gestion de base de données et interface utilisateur intuitive.</p>
+								<div class="tech-tags">
+									<span class="tag">JavaScript</span>
+									<span class="tag">SQL</span>
+									<span class="tag">API</span>
 								</div>
 							</div>
 						</article>
 
-						<article class="project" data-category="design">
+						<article class="project">
 							<div class="project-thumb">
-								<img src="https://via.placeholder.com/600x360?text=Projet+3" alt="Projet 3">
+								<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=360&fit=crop" alt="Infrastructure Système">
+								<div class="project-overlay">
+									<span class="badge">Infrastructure</span>
+								</div>
 							</div>
 							<div class="project-body">
-								<h3>Identité visuelle</h3>
-								<p>Création de marque, logo et guide de style pour startup.</p>
-								<div class="project-actions">
-									<button class="btn-sm" data-modal="project-3">Détails</button>
+								<h3>Infrastructure Système</h3>
+								<p>Gestion de serveurs, réseaux et sécurité informatique. Administration système et réseaux.</p>
+								<div class="tech-tags">
+									<span class="tag">Linux</span>
+									<span class="tag">Réseaux</span>
+									<span class="tag">Sécurité</span>
 								</div>
 							</div>
 						</article>
 					</div>
-
-					<!-- Modals projets (léger) -->
-					<div id="modals">
-						<div class="modal" id="project-1" aria-hidden="true">
-							<div class="modal-content">
-								<button class="modal-close" aria-label="Fermer">✕</button>
-								<h3>Site e‑commerce — Détails</h3>
-								<p>Stack : HTML, CSS, JS, Stripe, SEO. Rôle : Intégration et optimisation des performances.</p>
-							</div>
-						</div>
-						<div class="modal" id="project-2" aria-hidden="true">
-							<div class="modal-content">
-								<button class="modal-close" aria-label="Fermer">✕</button>
-								<h3>App mobile — Détails</h3>
-								<p>Prototype réalisé avec React Native. Tests utilisateurs et itérations UX.</p>
-							</div>
-						</div>
-						<div class="modal" id="project-3" aria-hidden="true">
-							<div class="modal-content">
-								<button class="modal-close" aria-label="Fermer">✕</button>
-								<h3>Identité visuelle — Détails</h3>
-								<p>Logo, palette, et guidelines d'utilisation pour support print et web.</p>
-							</div>
-						</div>
-					</div>
 				</div>
 			</section>
 
-			<section id="experience" class="section experience">
-				<div class="container">
-					<h2>Expérience</h2>
-					<ul class="timeline">
-						<li>
-							<strong>2022–Présent</strong>
-							<span>Développeur·se front-end — Agence XYZ</span>
-							<p>Lead front-end sur plusieurs projets clients, optimisation des performances.</p>
-						</li>
-						<li>
-							<strong>2019–2021</strong>
-							<span>Freelance — Divers clients</span>
-							<p>Conception de sites vitrines et boutiques e‑commerce.</p>
-						</li>
-					</ul>
-				</div>
-			</section>
 
+			<!-- Contact Section -->
 			<section id="contact" class="section contact">
 				<div class="container">
-					<h2>Contact</h2>
-					<p>Envoyez-moi un message pour discuter d'un projet ou d'une collaboration.</p>
-					<form id="contact-form">
-						<div class="form-grid">
-							<label>
-								Nom
-								<input type="text" name="name" required>
-							</label>
-							<label>
-								Email
-								<input type="email" name="email" required>
-							</label>
-							<label class="full">
-								Message
-								<textarea name="message" rows="6" required></textarea>
-							</label>
+					<div class="section-header">
+						<h2><i class="fas fa-envelope-open"></i> Contact</h2>
+						<p class="section-subtitle">Discutons de vos projets et opportunités</p>
+					</div>
+					<div class="contact-grid">
+						<!-- Contact Form -->
+						<div class="contact-form-wrapper">
+							<form id="contact-form">
+								<div class="form-grid">
+									<label>
+										<span>Nom complet</span>
+										<input type="text" name="name" required placeholder="Votre nom">
+									</label>
+									<label>
+										<span>Adresse email</span>
+										<input type="email" name="email" required placeholder="vous@exemple.fr">
+									</label>
+									<label class="full">
+										<span>Sujet</span>
+										<input type="text" name="subject" required placeholder="Sujet du message">
+									</label>
+									<label class="full">
+										<span>Message</span>
+										<textarea name="message" rows="6" required placeholder="Votre message..."></textarea>
+									</label>
+								</div>
+								<div class="form-actions">
+									<button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Envoyer</button>
+									<button type="reset" class="btn-outline"><i class="fas fa-redo"></i> Réinitialiser</button>
+								</div>
+								<p id="form-status" class="form-status" aria-live="polite"></p>
+							</form>
 						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn">Envoyer</button>
-							<button type="reset" class="btn-muted">Effacer</button>
+						
+						<!-- Contact Info -->
+						<div class="contact-info">
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-map-marker-alt"></i>
+								</div>
+								<div class="contact-details">
+									<h4>Adresse</h4>
+									<p>Saint-Nazaire<br>Loire-Atlantique, France</p>
+								</div>
+							</div>
+							
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<div class="contact-details">
+									<h4>Email</h4>
+									<p><a href="mailto:contact@example.com">contact@example.com</a></p>
+								</div>
+							</div>
+							
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-phone"></i>
+								</div>
+								<div class="contact-details">
+									<h4>Téléphone</h4>
+									<p><a href="tel:+33600000000">+33 6 XX XX XX XX</a></p>
+								</div>
+							</div>
+							
+							<div class="contact-item">
+								<div class="contact-icon">
+									<i class="fas fa-share-alt"></i>
+								</div>
+								<div class="contact-details">
+									<h4>Réseaux</h4>
+									<div class="social-badges">
+										<a href="#" class="social-badge" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+										<a href="#" class="social-badge" title="GitHub"><i class="fab fa-github"></i></a>
+										<a href="#" class="social-badge" title="Twitter"><i class="fab fa-twitter"></i></a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="availability-box">
+								<div class="availability-header">
+									<i class="fas fa-calendar-check"></i>
+									<span>Disponibilité</span>
+								</div>
+								<p><strong>Du 18 mai au 16 juin 2026</strong></p>
+								<p class="availability-text">Je suis disponible pour un stage</p>
+							</div>
 						</div>
-						<p id="form-status" class="form-status" aria-live="polite"></p>
-					</form>
+					</div>
 				</div>
 			</section>
 		</main>
 
+		<!-- Footer -->
 		<footer class="site-footer">
 			<div class="container footer-inner">
-				<p>© <span id="year"></span> Chedotal Julian — Tous droits réservés</p>
-				<p class="socials">
-					<a href="#">LinkedIn</a> · <a href="#">GitHub</a> · <a href="#">Twitter</a>
-				</p>
+				<div>
+					<p>© <span id="year"></span> Julian Chedotal | Étudiant en BTS CIEL</p>
+				</div>
+				<div class="socials">
+					<a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					<span>·</span>
+					<a href="#" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+					<span>·</span>
+					<a href="#" title="Email"><i class="fas fa-envelope"></i> Email</a>
+				</div>
 			</div>
 		</footer>
 
-		<button id="back-to-top" title="Haut de page">↑</button>
+		<!-- Back to Top Button -->
+		<button id="back-to-top" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
 	</body>
 </html>
 
